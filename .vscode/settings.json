@@ -1,0 +1,15 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "parser.h": "c",
+        "common.h": "c",
+        "vm.h": "c",
+        "core.h": "c",
+        "string.h": "c",
+        "unicodeutf8.h": "c",
+        "utils.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "cli.h": "c"
+    }
+}
