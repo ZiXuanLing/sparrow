@@ -29,7 +29,7 @@ typedef struct {
 } String;
 
 typedef struct {
-    uint32_t length;  // 
+    uint32_t length;  //
     char start[0];
 } CharValue;  // 字符串缓冲区
 
@@ -47,7 +47,7 @@ typedef struct {
 #define DEFINE_BUFFER_METHOD(type) \
     void type##BufferInit(type##Buffer *buf) { \
         buf->datas = NULL; \
-        bud->count = buf->capacity = 0; \
+        buf->count = buf->capacity = 0; \
     } \
     \
     void type##BufferFillWrite(VM *vm, type##Buffer *buf, type data, uint32_t fillCount) { \
@@ -92,7 +92,7 @@ typedef enum {
 } ErrorType;
 
 void errorReport(void *parser, ErrorType errorType, const char *fmt, ...);
-void symbalTableClear(VM *, SymbolTable *buffer);
+void symbolTableClear(VM *vm, SymbolTable *buffer);
 
 #define IO_ERROR(...) \
     errorReport(NULL, ERROR_IO, __VA_ARGS__)
@@ -100,7 +100,7 @@ void symbalTableClear(VM *, SymbolTable *buffer);
 #define MEM_ERROR(...) \
     errorReport(NULL, ERROR_MEM, __VA_ARGS__)
 
-#define LEN_ERROR(parser, ...) \
+#define LEX_ERROR(parser, ...) \
     errorReport(parser, ERROR_LEX, __VA_ARGS__)
 
 #define COMPILE_ERROR(parser, ...) \

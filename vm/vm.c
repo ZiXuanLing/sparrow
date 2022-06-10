@@ -2,8 +2,8 @@
 
 /**
  * @brief 初始化虚拟机
- * 
- * @param vm 
+ *
+ * @param vm
  */
 void initVM(VM *vm) {
     vm->allocatedBytes = 0;
@@ -11,14 +11,14 @@ void initVM(VM *vm) {
 }
 
 /**
- * @brief 
- * 
- * @return VM* 
+ * @brief
+ *
+ * @return VM*
  */
 VM* newVM(void) {
     VM* vm = (VM *)malloc(sizeof(VM));
     if (vm == NULL) {
-        
+
     }
     initVM(vm);
     return vm;

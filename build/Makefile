@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /root/sparrow
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/sparrow
+CMAKE_BINARY_DIR = /root/sparrow/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/CMakeFiles /root/sparrow/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/build/CMakeFiles /root/sparrow/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 01test
+# Target rules for targets named spr
 
 # Build rule for target.
-01test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 01test
-.PHONY : 01test
+spr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 spr
+.PHONY : spr
 
 # fast build rule for target.
-01test/fast:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/build
-.PHONY : 01test/fast
+spr/fast:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/build
+.PHONY : spr/fast
 
 cli/cli.o: cli/cli.c.o
 
@@ -129,7 +129,7 @@ cli/cli.o: cli/cli.c.o
 
 # target to build an object file
 cli/cli.c.o:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/cli/cli.c.o
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/cli/cli.c.o
 .PHONY : cli/cli.c.o
 
 cli/cli.i: cli/cli.c.i
@@ -138,7 +138,7 @@ cli/cli.i: cli/cli.c.i
 
 # target to preprocess a source file
 cli/cli.c.i:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/cli/cli.c.i
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/cli/cli.c.i
 .PHONY : cli/cli.c.i
 
 cli/cli.s: cli/cli.c.s
@@ -147,8 +147,62 @@ cli/cli.s: cli/cli.c.s
 
 # target to generate assembly for a file
 cli/cli.c.s:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/cli/cli.c.s
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/cli/cli.c.s
 .PHONY : cli/cli.c.s
+
+include/unicodeUtf8.o: include/unicodeUtf8.c.o
+
+.PHONY : include/unicodeUtf8.o
+
+# target to build an object file
+include/unicodeUtf8.c.o:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/unicodeUtf8.c.o
+.PHONY : include/unicodeUtf8.c.o
+
+include/unicodeUtf8.i: include/unicodeUtf8.c.i
+
+.PHONY : include/unicodeUtf8.i
+
+# target to preprocess a source file
+include/unicodeUtf8.c.i:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/unicodeUtf8.c.i
+.PHONY : include/unicodeUtf8.c.i
+
+include/unicodeUtf8.s: include/unicodeUtf8.c.s
+
+.PHONY : include/unicodeUtf8.s
+
+# target to generate assembly for a file
+include/unicodeUtf8.c.s:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/unicodeUtf8.c.s
+.PHONY : include/unicodeUtf8.c.s
+
+include/utils.o: include/utils.c.o
+
+.PHONY : include/utils.o
+
+# target to build an object file
+include/utils.c.o:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/utils.c.o
+.PHONY : include/utils.c.o
+
+include/utils.i: include/utils.c.i
+
+.PHONY : include/utils.i
+
+# target to preprocess a source file
+include/utils.c.i:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/utils.c.i
+.PHONY : include/utils.c.i
+
+include/utils.s: include/utils.c.s
+
+.PHONY : include/utils.s
+
+# target to generate assembly for a file
+include/utils.c.s:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/utils.c.s
+.PHONY : include/utils.c.s
 
 parser/parser.o: parser/parser.c.o
 
@@ -156,7 +210,7 @@ parser/parser.o: parser/parser.c.o
 
 # target to build an object file
 parser/parser.c.o:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/parser/parser.c.o
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/parser/parser.c.o
 .PHONY : parser/parser.c.o
 
 parser/parser.i: parser/parser.c.i
@@ -165,7 +219,7 @@ parser/parser.i: parser/parser.c.i
 
 # target to preprocess a source file
 parser/parser.c.i:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/parser/parser.c.i
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/parser/parser.c.i
 .PHONY : parser/parser.c.i
 
 parser/parser.s: parser/parser.c.s
@@ -174,7 +228,7 @@ parser/parser.s: parser/parser.c.s
 
 # target to generate assembly for a file
 parser/parser.c.s:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/parser/parser.c.s
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/parser/parser.c.s
 .PHONY : parser/parser.c.s
 
 vm/core.o: vm/core.c.o
@@ -183,7 +237,7 @@ vm/core.o: vm/core.c.o
 
 # target to build an object file
 vm/core.c.o:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/core.c.o
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/core.c.o
 .PHONY : vm/core.c.o
 
 vm/core.i: vm/core.c.i
@@ -192,7 +246,7 @@ vm/core.i: vm/core.c.i
 
 # target to preprocess a source file
 vm/core.c.i:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/core.c.i
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/core.c.i
 .PHONY : vm/core.c.i
 
 vm/core.s: vm/core.c.s
@@ -201,7 +255,7 @@ vm/core.s: vm/core.c.s
 
 # target to generate assembly for a file
 vm/core.c.s:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/core.c.s
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/core.c.s
 .PHONY : vm/core.c.s
 
 vm/vm.o: vm/vm.c.o
@@ -210,7 +264,7 @@ vm/vm.o: vm/vm.c.o
 
 # target to build an object file
 vm/vm.c.o:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/vm.c.o
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/vm.c.o
 .PHONY : vm/vm.c.o
 
 vm/vm.i: vm/vm.c.i
@@ -219,7 +273,7 @@ vm/vm.i: vm/vm.c.i
 
 # target to preprocess a source file
 vm/vm.c.i:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/vm.c.i
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/vm.c.i
 .PHONY : vm/vm.c.i
 
 vm/vm.s: vm/vm.c.s
@@ -228,7 +282,7 @@ vm/vm.s: vm/vm.c.s
 
 # target to generate assembly for a file
 vm/vm.c.s:
-	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/vm/vm.c.s
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/vm/vm.c.s
 .PHONY : vm/vm.c.s
 
 # Help Target
@@ -239,10 +293,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... 01test"
+	@echo "... spr"
 	@echo "... cli/cli.o"
 	@echo "... cli/cli.i"
 	@echo "... cli/cli.s"
+	@echo "... include/unicodeUtf8.o"
+	@echo "... include/unicodeUtf8.i"
+	@echo "... include/unicodeUtf8.s"
+	@echo "... include/utils.o"
+	@echo "... include/utils.i"
+	@echo "... include/utils.s"
 	@echo "... parser/parser.o"
 	@echo "... parser/parser.i"
 	@echo "... parser/parser.s"

@@ -9,7 +9,7 @@ struct vm {
     Parser *curParser; // 当前词法分析器
 };
 
-void initVM(VM *vm);
+void initVM(struct vm *vm);
 VM* newVM(void);
 
 #endif // !__SPARROW_VM_H__

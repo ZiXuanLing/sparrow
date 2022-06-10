@@ -4,6 +4,7 @@
 
 #include "../include/common.h"
 #include "../vm/vm.h"
+#include "../include/utils.h"
 
 typedef enum {
     TOKEN_UNKNOWN,
@@ -101,7 +102,25 @@ struct parser {  // 词法分析器结构
     // 处于内嵌表达式中，期望的右括号数量
     // 用于跟踪小括号对的嵌套
     int interpolationExpectRightParenNum;
-    VM* vm;  // parser隶属于哪一个vm，在词法分析过程中需要指定vm
+    struct vm* vm;  // parser隶属于哪一个vm，在词法分析过程中需要指定vm
 };
+
+
+int matchToken(Parser *parser, TokenType expected);
+static TokenType idOrkeyword(const char *start, uint32_t length);
+static int matchNextChar(Parser *parser, char expectedChar);
+static void getNextChar(Parser *parser);
+static void skipBlanks(Parser *parser);
+static void skipAline(Parser *parser);
+static void skipComment(Parser *parser);
+static void parseId(Parser *parser, TokenType type);
+static void parseUnicodeCodePoint(Parser *parser, ByteBuffer *buf);
+static void parseString(Parser *parser);
+char lookAheadChar(Parser *parser);
+void getNextToken(Parser *parser);
+void getNextToken(Parser *parser);
+void consumeCurToken(Parser *parser, TokenType expected, const char *errMsg);
+void consumeNextCurToken(Parser *parser, TokenType expected, const char *errMsg);
+void initParser(VM *vm, Parser *parser, const char *file, const char *sourceCode);
 
 #endif // !__SPARROW_PARSER_H__
