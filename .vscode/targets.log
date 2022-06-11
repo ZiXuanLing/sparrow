@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 11 19:16:47 2022
+# Make data base, printed on Sat Jun 11 23:47:34 2022
 
 # Variables
 
@@ -67,7 +67,7 @@ XDG_RUNTIME_DIR = /run/user/0
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-b3000596-ff7c-404c-911b-52a5ed99f021.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-65cc1012-600b-4edc-8a5d-50afa3504326.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -322,9 +322,9 @@ vm/vm.c.o:
 
 vm/vm.s: vm/vm.c.s
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 
 cmake_check_build_system:
@@ -577,6 +577,6 @@ rebuild_cache:
 # strcache performance: lookups = 256 / hit rate = 74%
 # hash-table stats:
 # Load=66/8192=1%, Rehash=0, Collisions=5/256=2%
-# Finished Make data base on Sat Jun 11 19:16:47 2022
+# Finished Make data base on Sat Jun 11 23:47:34 2022
 
  

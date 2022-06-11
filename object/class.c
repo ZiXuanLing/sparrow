@@ -16,7 +16,7 @@ DEFINE_BUFFER_METHOD(Method)
  * @param b
  * @return
  */
-int ValueIsEqual(Value a, Value b) {
+int valueIsEqual(Value a, Value b) {
     // 类型不同则无需进行后面的比较
 
     if (a.type != b.type) {

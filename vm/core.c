@@ -4,8 +4,10 @@
 #include <sys/stat.h>
 
 #include "../include/utils.h"
+#include "../object/class.h"
 #include "vm.h"
 
+#define CORE_MODULE VT_TO_VALUE(VT_NULL)
 
 char *rootDir = NULL; // 根目录
 
@@ -32,4 +34,19 @@ char *readFile(const char *path) {
 
     fclose(file);
     return fileContent;
+}
+
+VMResult executeModule(VM *vm, Value moduleName, const char *moduleCode) {
+    return VM_RESULT_ERROR;
+}
+
+/**
+ * @brief 编译核心模块
+ * 
+ * @param vm 
+ */
+void buildCore(VM *vm) {
+    // 创建核心模块 录入到vm->allModules
+    ObjModule *coreModule = newObjModule(vm, NULL);
+    mapSet(vm, vm->allModules, CORE_MODULE, OBJ_TO_VALUE(coreModule));
 }

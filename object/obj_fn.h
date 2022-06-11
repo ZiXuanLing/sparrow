@@ -44,7 +44,7 @@ typedef struct {
 typedef struct {
     uint8_t *ip;  // 程序计数器，指向下一个将被指向的指令
 
-    ObjClosure *closeure; // 在本frame中执行的闭包函数
+    ObjClosure *closure; // 在本frame中执行的闭包函数
 
     // 此项用于指向frame所在thread运行时栈的起始地址
     Value *stackStart;  // frame是共享thread.stack

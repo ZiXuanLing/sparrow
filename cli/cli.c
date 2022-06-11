@@ -1,9 +1,11 @@
 #include "cli.h"
 #include <stdio.h>
 #include <string.h>
+
 #include "../parser/parser.h"
 #include "../vm/vm.h"
 #include "../vm/core.h"
+#include "../object/class.h"
 
 
 static void runFile(const char *path) {
@@ -18,20 +20,22 @@ static void runFile(const char *path) {
     VM *vm = newVM();
     const char *sourceCode = readFile(path);
 
-    struct parser parser;
-    initParser(vm, &parser, path, sourceCode, NULL);
+    executeModule(vm, OBJ_TO_VALUE(newObjString(vm, path, strlen(path))), sourceCode);
 
-    #include "../parser/token.list"
+    // struct parser parser;
+    // initParser(vm, &parser, path, sourceCode, NULL);
 
-    while (parser.curToken.type != TOKEN_EOF) {
-        getNextToken(&parser);
-        printf("%dL: %s [", parser.curToken.lineNo, tokenArray[parser.curToken.type]);
-        uint32_t idx = 0;
-        while (idx < parser.curToken.length) {
-            printf("%c", *(parser.curToken.start + idx ++));
-        }
-        printf("]\n");
-    }
+    // #include "../parser/token.list"
+
+    // while (parser.curToken.type != TOKEN_EOF) {
+    //     getNextToken(&parser);
+    //     printf("%dL: %s [", parser.curToken.lineNo, tokenArray[parser.curToken.type]);
+    //     uint32_t idx = 0;
+    //     while (idx < parser.curToken.length) {
+    //         printf("%c", *(parser.curToken.start + idx ++));
+    //     }
+    //     printf("]\n");
+    // }
 }
 
 int main(int argc, const char **argv) {

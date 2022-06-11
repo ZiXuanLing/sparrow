@@ -45,7 +45,7 @@ typedef enum {
 #define VALUE_TO_OBJMODULE(value) ((ObjModule *)VALUE_TO_OBJ(value))
 #define VALUE_TO_CLASS(value) ((Class *)VALUE_TO_OBJ(value))
 
-#define VALUE_IS_UNDEFINED(value) ((value).type == VT_UNDEFINEED)
+#define VALUE_IS_UNDEFINED(value) ((value).type == VT_UNDEFINED)
 #define VALUE_IS_NULL(value) ((value).type == VT_NULL)
 #define VALUE_IS_TRUE(value) ((value).type == VT_TRUE)
 #define VALUE_IS_FALSE(value) ((value).type == VT_FALSE)
@@ -88,5 +88,7 @@ typedef union {
 
 #define CAPACITY_GROW_FACTOR 4
 #define MIN_CAPACITY 64
+
+int valueIsEqual(Value a, Value b);
 
 #endif //!__OBJECT_CLASS_H__

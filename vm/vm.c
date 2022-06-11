@@ -1,4 +1,5 @@
 #include "vm.h"
+#include "core.h"
 
 /**
  * @brief 初始化虚拟机
@@ -7,8 +8,11 @@
  */
 void initVM(VM *vm) {
     vm->allocatedBytes = 0;
-    vm->curParser = 0;
     vm->allObjects = NULL;
+    vm->curParser = NULL;
+    StringBufferInit(&vm->allMethodNames);
+    vm->allObjects = NULL;
+    vm->curParser = NULL;
 }
 
 /**
@@ -19,8 +23,9 @@ void initVM(VM *vm) {
 VM* newVM(void) {
     VM* vm = (VM *)malloc(sizeof(VM));
     if (vm == NULL) {
-
+        MEM_ERROR("allcate VM failed!");
     }
     initVM(vm);
+    buildCore(vm);
     return vm;
 }

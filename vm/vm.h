@@ -5,6 +5,7 @@
 #include "../include/common.h"
 #include "../object/header_obj.h"
 #include "../object/obj_map.h"
+#include "../object/obj_thread.h"
 
 typedef enum vmResult {
     VM_RESULT_SUCCESS,
