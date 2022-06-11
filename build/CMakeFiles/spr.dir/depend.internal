@@ -6,6 +6,9 @@ CMakeFiles/spr.dir/cli/cli.c.o
  /root/sparrow/cli/cli.h
  /root/sparrow/include/common.h
  /root/sparrow/include/utils.h
+ /root/sparrow/object/header_obj.h
+ /root/sparrow/object/meta_obj.h
+ /root/sparrow/object/obj_string.h
  /root/sparrow/parser/parser.h
  /root/sparrow/parser/token.list
  /root/sparrow/vm/core.h
@@ -18,22 +21,50 @@ CMakeFiles/spr.dir/include/utils.c.o
  /root/sparrow/include/common.h
  /root/sparrow/include/utils.c
  /root/sparrow/include/utils.h
+ /root/sparrow/object/header_obj.h
+ /root/sparrow/object/meta_obj.h
+ /root/sparrow/object/obj_string.h
  /root/sparrow/parser/parser.h
+ /root/sparrow/vm/vm.h
+CMakeFiles/spr.dir/object/header_obj.c.o
+ /root/sparrow/include/common.h
+ /root/sparrow/include/utils.h
+ /root/sparrow/object/class.h
+ /root/sparrow/object/header_obj.c
+ /root/sparrow/object/header_obj.h
+ /root/sparrow/object/meta_obj.h
+ /root/sparrow/object/obj_fn.h
+ /root/sparrow/object/obj_string.h
+ /root/sparrow/vm/vm.h
+CMakeFiles/spr.dir/object/obj_string.c.o
+ /root/sparrow/include/common.h
+ /root/sparrow/include/utils.h
+ /root/sparrow/object/header_obj.h
+ /root/sparrow/object/obj_string.c
+ /root/sparrow/object/obj_string.h
  /root/sparrow/vm/vm.h
 CMakeFiles/spr.dir/parser/parser.c.o
  /root/sparrow/include/common.h
  /root/sparrow/include/unicodeUtf8.h
  /root/sparrow/include/utils.h
+ /root/sparrow/object/class.h
+ /root/sparrow/object/header_obj.h
+ /root/sparrow/object/meta_obj.h
+ /root/sparrow/object/obj_fn.h
+ /root/sparrow/object/obj_string.h
  /root/sparrow/parser/parser.c
  /root/sparrow/parser/parser.h
  /root/sparrow/vm/vm.h
 CMakeFiles/spr.dir/vm/core.c.o
  /root/sparrow/include/common.h
  /root/sparrow/include/utils.h
+ /root/sparrow/object/header_obj.h
  /root/sparrow/vm/core.c
  /root/sparrow/vm/core.h
  /root/sparrow/vm/vm.h
 CMakeFiles/spr.dir/vm/vm.c.o
  /root/sparrow/include/common.h
+ /root/sparrow/include/utils.h
+ /root/sparrow/object/header_obj.h
  /root/sparrow/vm/vm.c
  /root/sparrow/vm/vm.h

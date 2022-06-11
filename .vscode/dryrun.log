@@ -1,9 +1,15 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/root/sparrow'
-gcc -g -lm -Wall -I object -I vm -I compiler -I parser -I include -I cli -I gc -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers   -c -o cli/cli.o cli/cli.c
-gcc -g -lm -Wall -I object -I vm -I compiler -I parser -I include -I cli -I gc -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers   -c -o parser/parser.o parser/parser.c
-gcc -g -lm -Wall -I object -I vm -I compiler -I parser -I include -I cli -I gc -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers   -c -o vm/vm.o vm/vm.c
-gcc -g -lm -Wall -I object -I vm -I compiler -I parser -I include -I cli -I gc -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers   -c -o vm/core.o vm/core.c
-gcc -o spr  cli/cli.o  parser/parser.o  vm/vm.o  vm/core.o -g -lm -Wall -I object -I vm -I compiler -I parser -I include -I cli -I gc -W -Wstrict-prototypes -Wmissing-prototypes -Wsystem-headers
+/usr/bin/cmake -S/root/sparrow -B/root/sparrow --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /root/sparrow/CMakeFiles /root/sparrow/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/root/sparrow'
+make[1]: Leaving directory '/root/sparrow'
 make: Leaving directory '/root/sparrow'
  
+make[1]: CMakeFiles/Makefile2: No such file or directory
+make[1]: *** No rule to make target 'CMakeFiles/Makefile2'.
+make[1]: Failed to remake makefile 'CMakeFiles/Makefile2'.
+make[1]: *** No rule to make target 'all'.
+make: *** [Makefile:84: all] Error 2
+

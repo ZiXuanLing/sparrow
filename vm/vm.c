@@ -8,6 +8,7 @@
 void initVM(VM *vm) {
     vm->allocatedBytes = 0;
     vm->curParser = 0;
+    vm->allObjects = NULL;
 }
 
 /**

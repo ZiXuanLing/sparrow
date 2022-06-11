@@ -10,6 +10,7 @@
         "utils.h": "c",
         "stdio.h": "c",
         "stdint.h": "c",
-        "cli.h": "c"
+        "cli.h": "c",
+        "obj_fn.h": "c"
     }
 }

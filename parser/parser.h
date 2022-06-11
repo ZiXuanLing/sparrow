@@ -5,6 +5,7 @@
 #include "../include/common.h"
 #include "../vm/vm.h"
 #include "../include/utils.h"
+#include "../object/meta_obj.h"
 
 typedef enum {
     TOKEN_UNKNOWN,
@@ -89,6 +90,7 @@ typedef struct {  // 词法分析器合成周边信息的复合结构
     const char *start;  // 源码串中单词的起始地址
     uint32_t length;  // 该单词的长度
     uint32_t lineNo;  // 单词在源码中的行号
+    Value value;
 } Token;
 
 struct parser {  // 词法分析器结构
@@ -98,6 +100,7 @@ struct parser {  // 词法分析器结构
     char curChar; // 识别到的当前字符
     Token curToken; // 当前的token
     Token preToken;  // 前一个token
+    ObjModule *curModule; // 当前正在编译的模块
 
     // 处于内嵌表达式中，期望的右括号数量
     // 用于跟踪小括号对的嵌套
@@ -118,9 +121,13 @@ static void parseUnicodeCodePoint(Parser *parser, ByteBuffer *buf);
 static void parseString(Parser *parser);
 char lookAheadChar(Parser *parser);
 void getNextToken(Parser *parser);
-void getNextToken(Parser *parser);
+// void getNextToken(Parser *parser);
 void consumeCurToken(Parser *parser, TokenType expected, const char *errMsg);
 void consumeNextCurToken(Parser *parser, TokenType expected, const char *errMsg);
-void initParser(VM *vm, Parser *parser, const char *file, const char *sourceCode);
+void initParser(VM *vm, Parser *parser, const char *file, const char *sourceCode, ObjModule *objModule);
+static void parseOctNum(Parser *parser);
+static void parseDecNum(Parser *parser);
+static void parseNum(Parser *parser);
+static void parseHexNum(Parser *parser);
 
 #endif // !__SPARROW_PARSER_H__

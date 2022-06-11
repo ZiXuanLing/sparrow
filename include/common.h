@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct class Class;
 typedef struct parser Parser;
 typedef struct vm VM;
 

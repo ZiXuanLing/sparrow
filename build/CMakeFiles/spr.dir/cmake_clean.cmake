@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/spr.dir/cli/cli.c.o"
   "CMakeFiles/spr.dir/include/unicodeUtf8.c.o"
   "CMakeFiles/spr.dir/include/utils.c.o"
+  "CMakeFiles/spr.dir/object/header_obj.c.o"
+  "CMakeFiles/spr.dir/object/obj_string.c.o"
   "CMakeFiles/spr.dir/parser/parser.c.o"
   "CMakeFiles/spr.dir/vm/core.c.o"
   "CMakeFiles/spr.dir/vm/vm.c.o"

@@ -204,6 +204,60 @@ include/utils.c.s:
 	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/include/utils.c.s
 .PHONY : include/utils.c.s
 
+object/header_obj.o: object/header_obj.c.o
+
+.PHONY : object/header_obj.o
+
+# target to build an object file
+object/header_obj.c.o:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/header_obj.c.o
+.PHONY : object/header_obj.c.o
+
+object/header_obj.i: object/header_obj.c.i
+
+.PHONY : object/header_obj.i
+
+# target to preprocess a source file
+object/header_obj.c.i:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/header_obj.c.i
+.PHONY : object/header_obj.c.i
+
+object/header_obj.s: object/header_obj.c.s
+
+.PHONY : object/header_obj.s
+
+# target to generate assembly for a file
+object/header_obj.c.s:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/header_obj.c.s
+.PHONY : object/header_obj.c.s
+
+object/obj_string.o: object/obj_string.c.o
+
+.PHONY : object/obj_string.o
+
+# target to build an object file
+object/obj_string.c.o:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/obj_string.c.o
+.PHONY : object/obj_string.c.o
+
+object/obj_string.i: object/obj_string.c.i
+
+.PHONY : object/obj_string.i
+
+# target to preprocess a source file
+object/obj_string.c.i:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/obj_string.c.i
+.PHONY : object/obj_string.c.i
+
+object/obj_string.s: object/obj_string.c.s
+
+.PHONY : object/obj_string.s
+
+# target to generate assembly for a file
+object/obj_string.c.s:
+	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/object/obj_string.c.s
+.PHONY : object/obj_string.c.s
+
 parser/parser.o: parser/parser.c.o
 
 .PHONY : parser/parser.o
@@ -303,6 +357,12 @@ help:
 	@echo "... include/utils.o"
 	@echo "... include/utils.i"
 	@echo "... include/utils.s"
+	@echo "... object/header_obj.o"
+	@echo "... object/header_obj.i"
+	@echo "... object/header_obj.s"
+	@echo "... object/obj_string.o"
+	@echo "... object/obj_string.i"
+	@echo "... object/obj_string.s"
 	@echo "... parser/parser.o"
 	@echo "... parser/parser.i"
 	@echo "... parser/parser.s"

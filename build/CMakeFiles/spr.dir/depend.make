@@ -5,6 +5,9 @@ CMakeFiles/spr.dir/cli/cli.c.o: ../cli/cli.c
 CMakeFiles/spr.dir/cli/cli.c.o: ../cli/cli.h
 CMakeFiles/spr.dir/cli/cli.c.o: ../include/common.h
 CMakeFiles/spr.dir/cli/cli.c.o: ../include/utils.h
+CMakeFiles/spr.dir/cli/cli.c.o: ../object/header_obj.h
+CMakeFiles/spr.dir/cli/cli.c.o: ../object/meta_obj.h
+CMakeFiles/spr.dir/cli/cli.c.o: ../object/obj_string.h
 CMakeFiles/spr.dir/cli/cli.c.o: ../parser/parser.h
 CMakeFiles/spr.dir/cli/cli.c.o: ../parser/token.list
 CMakeFiles/spr.dir/cli/cli.c.o: ../vm/core.h
@@ -17,23 +20,51 @@ CMakeFiles/spr.dir/include/unicodeUtf8.c.o: ../include/unicodeUtf8.h
 CMakeFiles/spr.dir/include/utils.c.o: ../include/common.h
 CMakeFiles/spr.dir/include/utils.c.o: ../include/utils.c
 CMakeFiles/spr.dir/include/utils.c.o: ../include/utils.h
+CMakeFiles/spr.dir/include/utils.c.o: ../object/header_obj.h
+CMakeFiles/spr.dir/include/utils.c.o: ../object/meta_obj.h
+CMakeFiles/spr.dir/include/utils.c.o: ../object/obj_string.h
 CMakeFiles/spr.dir/include/utils.c.o: ../parser/parser.h
 CMakeFiles/spr.dir/include/utils.c.o: ../vm/vm.h
+
+CMakeFiles/spr.dir/object/header_obj.c.o: ../include/common.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../include/utils.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/class.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/header_obj.c
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/header_obj.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/meta_obj.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/obj_fn.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../object/obj_string.h
+CMakeFiles/spr.dir/object/header_obj.c.o: ../vm/vm.h
+
+CMakeFiles/spr.dir/object/obj_string.c.o: ../include/common.h
+CMakeFiles/spr.dir/object/obj_string.c.o: ../include/utils.h
+CMakeFiles/spr.dir/object/obj_string.c.o: ../object/header_obj.h
+CMakeFiles/spr.dir/object/obj_string.c.o: ../object/obj_string.c
+CMakeFiles/spr.dir/object/obj_string.c.o: ../object/obj_string.h
+CMakeFiles/spr.dir/object/obj_string.c.o: ../vm/vm.h
 
 CMakeFiles/spr.dir/parser/parser.c.o: ../include/common.h
 CMakeFiles/spr.dir/parser/parser.c.o: ../include/unicodeUtf8.h
 CMakeFiles/spr.dir/parser/parser.c.o: ../include/utils.h
+CMakeFiles/spr.dir/parser/parser.c.o: ../object/class.h
+CMakeFiles/spr.dir/parser/parser.c.o: ../object/header_obj.h
+CMakeFiles/spr.dir/parser/parser.c.o: ../object/meta_obj.h
+CMakeFiles/spr.dir/parser/parser.c.o: ../object/obj_fn.h
+CMakeFiles/spr.dir/parser/parser.c.o: ../object/obj_string.h
 CMakeFiles/spr.dir/parser/parser.c.o: ../parser/parser.c
 CMakeFiles/spr.dir/parser/parser.c.o: ../parser/parser.h
 CMakeFiles/spr.dir/parser/parser.c.o: ../vm/vm.h
 
 CMakeFiles/spr.dir/vm/core.c.o: ../include/common.h
 CMakeFiles/spr.dir/vm/core.c.o: ../include/utils.h
+CMakeFiles/spr.dir/vm/core.c.o: ../object/header_obj.h
 CMakeFiles/spr.dir/vm/core.c.o: ../vm/core.c
 CMakeFiles/spr.dir/vm/core.c.o: ../vm/core.h
 CMakeFiles/spr.dir/vm/core.c.o: ../vm/vm.h
 
 CMakeFiles/spr.dir/vm/vm.c.o: ../include/common.h
+CMakeFiles/spr.dir/vm/vm.c.o: ../include/utils.h
+CMakeFiles/spr.dir/vm/vm.c.o: ../object/header_obj.h
 CMakeFiles/spr.dir/vm/vm.c.o: ../vm/vm.c
 CMakeFiles/spr.dir/vm/vm.c.o: ../vm/vm.h
 

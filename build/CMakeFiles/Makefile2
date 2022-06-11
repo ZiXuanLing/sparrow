@@ -74,12 +74,12 @@ clean: CMakeFiles/spr.dir/clean
 CMakeFiles/spr.dir/all:
 	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/depend
 	$(MAKE) -f CMakeFiles/spr.dir/build.make CMakeFiles/spr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/sparrow/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target spr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/sparrow/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target spr"
 .PHONY : CMakeFiles/spr.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/spr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/spr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/sparrow/build/CMakeFiles 0
 .PHONY : CMakeFiles/spr.dir/rule

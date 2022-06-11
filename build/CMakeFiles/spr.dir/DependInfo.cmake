@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/root/sparrow/cli/cli.c" "/root/sparrow/build/CMakeFiles/spr.dir/cli/cli.c.o"
   "/root/sparrow/include/unicodeUtf8.c" "/root/sparrow/build/CMakeFiles/spr.dir/include/unicodeUtf8.c.o"
   "/root/sparrow/include/utils.c" "/root/sparrow/build/CMakeFiles/spr.dir/include/utils.c.o"
+  "/root/sparrow/object/header_obj.c" "/root/sparrow/build/CMakeFiles/spr.dir/object/header_obj.c.o"
+  "/root/sparrow/object/obj_string.c" "/root/sparrow/build/CMakeFiles/spr.dir/object/obj_string.c.o"
   "/root/sparrow/parser/parser.c" "/root/sparrow/build/CMakeFiles/spr.dir/parser/parser.c.o"
   "/root/sparrow/vm/core.c" "/root/sparrow/build/CMakeFiles/spr.dir/vm/core.c.o"
   "/root/sparrow/vm/vm.c" "/root/sparrow/build/CMakeFiles/spr.dir/vm/vm.c.o"
@@ -26,6 +28,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../parser"
   "../cli"
   "../gc"
+  "../object"
   )
 
 # Targets to which this target links.
