@@ -6,6 +6,7 @@
 #include "../vm/vm.h"
 #include "../include/utils.h"
 #include "../object/meta_obj.h"
+#include "../compiler/compiler.h"
 
 typedef enum {
     TOKEN_UNKNOWN,
@@ -101,10 +102,12 @@ struct parser {  // 词法分析器结构
     Token curToken; // 当前的token
     Token preToken;  // 前一个token
     ObjModule *curModule; // 当前正在编译的模块
+    CompileUnit *curCompileUnit; // 当前编译单元
 
     // 处于内嵌表达式中，期望的右括号数量
     // 用于跟踪小括号对的嵌套
     int interpolationExpectRightParenNum;
+    struct parser *parent; // 指向父parser
     struct vm* vm;  // parser隶属于哪一个vm，在词法分析过程中需要指定vm
 };
 

@@ -4,12 +4,14 @@ make: Entering directory '/root/sparrow'
 /usr/bin/cmake -E cmake_progress_start /root/sparrow/CMakeFiles /root/sparrow/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
 make[1]: Entering directory '/root/sparrow'
-make[1]: Leaving directory '/root/sparrow'
-make: Leaving directory '/root/sparrow'
  
 make[1]: CMakeFiles/Makefile2: No such file or directory
+
 make[1]: *** No rule to make target 'CMakeFiles/Makefile2'.
 make[1]: Failed to remake makefile 'CMakeFiles/Makefile2'.
 make[1]: *** No rule to make target 'all'.
 make: *** [Makefile:84: all] Error 2
 
+make[1]: Leaving directory '/root/sparrow'
+make: Leaving directory '/root/sparrow'
+ 

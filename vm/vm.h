@@ -7,6 +7,13 @@
 #include "../object/obj_map.h"
 #include "../object/obj_thread.h"
 
+// 为定义opcode.inc中的操作码加上前缀OPCODE_
+#define OPCODE_SLOTS(opcode, effect) OPCODE_##opcode,
+typedef enum {
+    #include "opcode.inc"
+} OpCode;
+#undef OPCODE_SLOTS
+
 typedef enum vmResult {
     VM_RESULT_SUCCESS,
     VM_RESULT_ERROR

@@ -11,7 +11,7 @@
 #define MAX_UPVALUE_NUM 128
 #define MAX_ID_LEN 128 // 变量名最大长度
 
-#define MAX_METHOD_NAME_LEN NAX_ID_LEN
+#define MAX_METHOD_NAME_LEN MAX_ID_LEN
 #define MAX_ARG_NUM 16
 
 #define MAX_SIGN_LEN MAX_METHOD_NAME_LEN + MAX_ARG_NUM * 2 + 1
@@ -65,5 +65,6 @@ typedef struct {
 
 typedef struct compileUnit CompileUnit;
 int defineModuleVar(VM *vm, ObjModule *objModule, const char *name, uint32_t length, Value value);
+ObjFn* compileModule(VM *vm, ObjModule *objModule, const char *moduleCore);
 
 #endif //SPARROW_COMPILER_H

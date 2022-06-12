@@ -20,7 +20,7 @@ typedef enum {
 
 #define VT_TO_VALUE(vt) ((Value){vt, {0}})
 
-#define BOOL_TO_VALUE(boolean) (boolean ? VT_TO_VALUE(VT_TRUE) : VT_TO_VALUE(vt_false))
+#define BOOL_TO_VALUE(boolean) (boolean ? VT_TO_VALUE(VT_TRUE) : VT_TO_VALUE(VT_FALSE))
 #define VALUE_TO_BOOL(value) ((value).type == VT_TRUE ? true: false)
 
 #define NUM_TO_VALUE(num) ((Value){VT_NUM, {num}})
@@ -57,6 +57,7 @@ typedef enum {
 #define VALUE_IS_OBJCLOSURE(value) ((value).type == OT_CLOSURE)
 #define VALUE_IS_OBJRANGE(value) ((value).type == OT_RANGE)
 #define VALUE_IS_OBJCLASS(value) ((value).type == OT_CLASS)
+#define VALUE_IS_CLASS(value) (VALUE_IS_CREATIN_OBJ(value, OT_CLASS))
 #define VALUE_IS_0(value) (VALUE_IS_NUM(value) && (value).num == 0)
 
 // 原生方法指针
@@ -90,5 +91,7 @@ typedef union {
 #define MIN_CAPACITY 64
 
 int valueIsEqual(Value a, Value b);
+inline Class *getClassOfObj(VM *vm, Value object);
+Class* newRawClass(VM *vm, const char *name, uint32_t fieldNum);
 
 #endif //!__OBJECT_CLASS_H__
