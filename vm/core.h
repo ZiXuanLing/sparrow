@@ -28,4 +28,10 @@ void bindSuperClass(VM *vm, Class *subClass, Class *superClass);
 static ObjModule* getModule(VM *vm, Value moduleName);
 static ObjThread* loadModule(VM *vm, Value moduleName, const char *moduleCode);
 
+/**
+ * @brief 内建类，用C语言实现
+ * 
+ */
+static Value getCoreClassValue(ObjModule *objModule, const char *name);
+
 #endif // !__SPARROW_CORE_H__

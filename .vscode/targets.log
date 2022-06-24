@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 12 19:31:41 2022
+# Make data base, printed on Fri Jun 24 15:42:58 2022
 
 # Variables
 
@@ -39,9 +39,9 @@ SHELL = /bin/sh
 # makefile (from 'Makefile', line 45)
 RM = /usr/bin/cmake -E remove -f
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/root/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/root/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/root/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/root/.vscode-server/data/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/tcf.json","_cacheRoot":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-_ = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/node
+_ = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
 # makefile (from 'Makefile', line 54)
 CMAKE_BINARY_DIR = /root/sparrow
 # makefile (from 'Makefile', line 1)
@@ -57,9 +57,9 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 211.69.128.55 58355 192.168.0.107 22
+SSH_CONNECTION = 211.69.128.36 49944 192.168.0.107 22
 # environment
-PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -67,7 +67,7 @@ XDG_RUNTIME_DIR = /run/user/0
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-c31c4d94-f5cf-4401-aef1-79cdf7f00f43.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-9d140347-9b42-499b-ac6e-fcaa8b9fcb8a.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,7 +109,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 0
 # environment
-XDG_SESSION_ID = 3041
+XDG_SESSION_ID = 3380
 # environment
 USER = root
 # makefile
@@ -135,11 +135,11 @@ MAKEFLAGS = pqrRs
 # environment
 MFLAGS = -pqrRs
 # environment
-SSH_CLIENT = 211.69.128.55 58355 22
+SSH_CLIENT = 211.69.128.36 49944 22
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -277,7 +277,6 @@ cli/cli.c.s:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 150):
 	$(MAKE) -f CMakeFiles/01test.dir/build.make CMakeFiles/01test.dir/cli/cli.c.s
@@ -335,6 +334,7 @@ cmake_check_build_system:
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
+ 
 # @ := cmake_check_build_system
 # automatic
 # % := 
@@ -556,7 +556,6 @@ cli/cli.s: cli/cli.c.s
 
 rebuild_cache:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -578,6 +577,6 @@ rebuild_cache:
 # strcache performance: lookups = 256 / hit rate = 74%
 # hash-table stats:
 # Load=66/8192=1%, Rehash=0, Collisions=5/256=2%
-# Finished Make data base on Sun Jun 12 19:31:41 2022
+# Finished Make data base on Fri Jun 24 15:42:58 2022
 
  

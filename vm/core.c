@@ -429,3 +429,19 @@ int ensureSymbolExist(VM *vm, SymbolTable *table, const char *symbol, uint32_t l
     }
     return symbolIndex;
 }
+
+/**
+ * 返回核心模块name的value结构
+ * @param objModule
+ * @param name
+ * @return
+ */
+static Value getCoreClassValue(ObjModule *objModule, const char *name) {
+    int index = getIndexFromSymbolTable(&objModule->moduleVarName, name, strlen(name));
+    if (index == -1) {
+        char id[MAX_ID_LEN] = {'\0'};
+        memcpy(id, name, strlen(name));
+        RUN_ERROR("something wrong occur: missing core class \"%s\"!", id);
+    }
+    return objModule->moduelVarValue.datas[index];
+}
